@@ -15,12 +15,12 @@
     <header>
       <h1>Welcome to the Green Dragon Inn</h1>
     </header>
-      <section class="user-controls col-2">
+      <div class="user-controls text-center col-3">
 
       <h5 id='message'>Welcome! </h5>
       <form id="sign-up">
         <h3> Sign Up </h3>
-        <input type="text" class="form-control" name="credentials[email]" placeholder="Enter Email Address" required>
+        <input type="text" class="form-control" name="credentials[email]" placeholder="Enter Email" required>
         <input type="password" class="form-control" name="credentials[password]" placeholder="Password" required>
         <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
         <input  class="btn btn-primary" type="submit" value="Sign Up" />
@@ -29,10 +29,23 @@
 
       <form id="sign-in">
         <h3> Sign In </h3>
-          <input type="text" class="form-control" name="credentials[email]" placeholder="Enter Email Address" required>
+          <input type="text" class="form-control" name="credentials[email]" placeholder="Enter Email" required>
           <input type="password" class="form-control" name="credentials[password]" placeholder="Password" required>
           <input class="btn btn-primary" type="submit" value="Sign In" />
       </form>
-    </section>
+
+      <form id='sign-out'>
+        <h3>Sign Out</h3>
+        <input class="btn btn-primary" type="submit" value="Sign Out" />
+      </form>
+
+      <form id="change-pw">
+        <h3>Change Password</h3>
+        <input type='password' class="form-control" name="passwords[old]" placeholder="Current Password" required/>
+        <input type='password' class="form-control" name="passwords[new]" placeholder="New Password" required/>
+        <input type="submit" class="btn btn-info" value="Change Password" />
+      </form>
+    </div>
+
     </body>
 </html>
