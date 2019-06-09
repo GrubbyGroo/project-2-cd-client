@@ -1,0 +1,13 @@
+{{#each fullGameList as |game|}}
+  <section data-id="{{game.id}}">
+    <h6>Title:</h6>
+    <h3>
+      {{game.title}}
+    </h3>
+    {{#if game.editable}}
+      <button type="submit" class="btn btn-info update-game">Edit</button>
+      <button type="submit" class="btn btn-danger delete-game">Remove</button>
+    {{/if}}
+  </section>
+
+{{/each}}

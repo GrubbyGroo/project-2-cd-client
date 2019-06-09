@@ -43,7 +43,7 @@ const onSignOut = event => {
 
 const authHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
-  $('#signin-btn').on('submit', onSignIn)
+  $('#sign-in').on('submit', onSignIn)
   $('#change-pw').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
 }

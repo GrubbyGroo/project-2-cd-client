@@ -8,7 +8,9 @@
 const authEvents = require('./auth/events.js')
 const store = require('./store.js')
 const api = require('./auth/api.js')
+const dbEvents = require('./db/events.js')
 
 $(() => {
   authEvents.authHandlers()
+  dbEvents.dbHandlers()
 })

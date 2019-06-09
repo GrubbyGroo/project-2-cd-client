@@ -15,6 +15,7 @@
     <header>
       <h1>Welcome to the Green Dragon Inn</h1>
     </header>
+    <nav>
       <div class="user-controls text-center col-3">
 
       <h5 id='message'>Welcome! </h5>
@@ -43,9 +44,25 @@
         <h3>Change Password</h3>
         <input type='password' class="form-control" name="passwords[old]" placeholder="Current Password" required/>
         <input type='password' class="form-control" name="passwords[new]" placeholder="New Password" required/>
-        <input type="submit" class="btn btn-info" value="Change Password" />
+        <input type="submit" class="btn btn-info" value="Change Password"/>
       </form>
     </div>
-
+  <section>
+    <button id="getGames" class="btn btn-info">Get Games!</button>
+  </section>
+  <form id="createGame">
+    <h3>Create A Game!</h3>
+    <input type='text' class="form-control" name="title" placeholder="Title" required/>
+    <input type='text' class="form-control" name="system" placeholder="System" required/>
+    <input type='text' class="form-control" name="player_count" placeholder="Player Count" required/>
+    <input type='text' class="form-control" name="sessions_count" placeholder="Sessions Count" required/>
+    <input type='text' class="form-control" name="description" placeholder="Description" required/>
+    <input type='date' class="form-control" name="start_date" placeholder="Start Date" required/>
+    <input type="submit" class="btn btn-info" value="Create Game!"/>
+  </form>
+  </nav>
+  <main>
+      <div id="content" class="content"></div>
+    </main>
     </body>
 </html>
