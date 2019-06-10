@@ -1,13 +1,26 @@
 {{#each fullGameList as |game|}}
   <section data-id="{{game.id}}">
-    <h6>Title:</h6>
-    <h3>
+    <h6>Title:
       {{game.title}}
-    </h3>
+    </h6>
+    <h6>System:
+      {{game.system}}
+    </h6>
+    <h6>How Many Players:
+      {{game.player_count}}
+    </h6>
+    <h6>How Many Sessions:
+      {{game.sessions_count}}
+    </h6>
+    <h6>Description:
+      {{game.description}}
+    </h6>
+    <h6>Start Date:
+      {{game.start_date}}
+    </h6>
     {{#if game.editable}}
       <button type="submit" class="btn btn-info update-game">Edit</button>
       <button type="submit" class="btn btn-danger delete-game">Remove</button>
     {{/if}}
   </section>
-
 {{/each}}
