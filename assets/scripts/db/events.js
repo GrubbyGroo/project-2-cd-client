@@ -32,8 +32,8 @@ const onDeleteGame = (event) => {
 const onUpdateGame = (event) => {
   event.preventDefault()
   const gameId = $(event.target).closest('section').data('id')
-  const formData = getFormFields(gameId)
-  api.updateGame(formData)
+  const formData = getFormFields(event.target)
+  api.updateGame(gameId, formData)
     .then(() => onGetGames(event))
     .catch(ui.onCreateFailure)
 }

@@ -1,10 +1,11 @@
 'use strict'
 
-const store = require('../store.js')
+// const store = require('../store.js')
 const showGamesTemplate = require('../templates/games.handlebars')
 
 const getGamesSuccess = responseData => {
   $('#message').text('See the games below!')
+  $('form').trigger('reset')
   const games = responseData.game_lists
   console.log(games)
   const showGamesHtml = showGamesTemplate({ fullGameList: games })

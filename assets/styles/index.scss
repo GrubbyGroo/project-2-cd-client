@@ -3,10 +3,24 @@
 .user-controls-not-logged {
   display: flex;
   flex-direction: row;
+  text-align: center;
+  justify-content: center;
 }
 
 .dropdown {
-  padding: 5px;
+  padding-left: 20px;
+}
+
+.message {
+  text-align: center;
+}
+
+header {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
 }
 //
 // .user{

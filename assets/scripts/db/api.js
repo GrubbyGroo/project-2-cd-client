@@ -33,14 +33,14 @@ const createGame = function (formData) {
   })
 }
 
-const updateGame = function (id, data) {
+const updateGame = function (id, formData) {
   return $.ajax({
-    url: config.apiUrl + '/gamelist/' + data.id,
+    url: config.apiUrl + `/gamelist/${id}`,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: data
+    data: formData
   })
 }
 

@@ -3,6 +3,7 @@
 const store = require('../store.js')
 
 const onSignUpSuccess = responseData => {
+  console.log(responseData)
   $('#message').text('Signed up Successfully! Please log in to Play!')
   $('form').trigger('reset')
 }
