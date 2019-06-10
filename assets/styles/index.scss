@@ -1,10 +1,30 @@
 @import '~bootstrap/scss/bootstrap';
 
+body {
+
+}
+
+section {
+  width: 30%;
+  background: white;
+  border: 1px solid;
+  outline: none;
+  padding: 1rem;
+}
+
+.content {
+  @include make-row;
+}
+
 .user-controls-not-logged {
   display: flex;
   flex-direction: row;
   text-align: center;
   justify-content: center;
+}
+
+span {
+  color: #8ad370;
 }
 
 .message {
@@ -21,12 +41,6 @@ h6 {
 
 .btn-secondary {
   width: 15rem;
-}
-
-section {
-  border: 1px solid;
-  text-align: center;
-  padding: 5px;
 }
 
 .user-controls-logged {
@@ -51,9 +65,3 @@ header {
 .hidden {
   display: none;
 }
-//
-// .user{
-//  display: flex;
-//  flex-direction: row;
-//  width: 50%;
-// }

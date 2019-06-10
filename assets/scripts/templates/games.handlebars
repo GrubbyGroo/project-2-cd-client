@@ -2,22 +2,22 @@
 {{#if game.editable}}
   <section data-id="{{game.id}}">
     <h6>Title:
-      {{game.title}}
-    </h6>
+      <span>{{game.title}}</span>
+    </h6><span>
     <h6>System:
-      {{game.system}}
+      <span>{{game.system}}</span>
     </h6>
     <h6>How Many Players:
-      {{game.player_count}}
+      <span>{{game.player_count}}</span>
     </h6>
     <h6>How Many Sessions:
-      {{game.sessions_count}}
-    </h6>
+      <span>{{game.sessions_count}}</span>
+    </h6></span>
     <h6>Description:
-      {{game.description}}
+      <span>{{game.description}}</span>
     </h6>
     <h6>Start Date:
-      {{game.start_date}}
+      <span>{{game.start_date}}</span>
     </h6>
     {{/if}}
     {{#if game.editable}}
@@ -33,32 +33,29 @@
       <input type='date' class="form-control" name="game_list[start_date]" placeholder="Start Date" required/>
       <button type="submit" class="update btn btn-info update-game">Submit Update</button>
     </form>
-  </div>
-</div>
-    {{/if}}
-  </section>
-{{/each}}
 
-<section>
+    {{/if}}
+ </section>
+{{/each}}
 {{#each fullGameList as |game|}}
-  <section data-id="{{game.id}}">
-    <h6>Title:
-      {{game.title}}
-    </h6>
-    <h6>System:
-      {{game.system}}
-    </h6>
-    <h6>How Many Players:
-      {{game.player_count}}
-    </h6>
-    <h6>How Many Sessions:
-      {{game.sessions_count}}
-    </h6>
-    <h6>Description:
-      {{game.description}}
-    </h6>
-    <h6>Start Date:
-      {{game.start_date}}
-    </h6>
+<section data-id="{{game.id}}">
+  <h6>Title:
+    <span>{{game.title}}</span>
+  </h6><span>
+  <h6>System:
+    <span>{{game.system}}</span>
+  </h6>
+  <h6>How Many Players:
+    <span>{{game.player_count}}</span>
+  </h6>
+  <h6>How Many Sessions:
+    <span>{{game.sessions_count}}</span>
+  </h6></span>
+  <h6>Description:
+    <span>{{game.description}}</span>
+  </h6>
+  <h6>Start Date:
+    <span>{{game.start_date}}</span>
+  </h6>
       </section>
     {{/each}}
