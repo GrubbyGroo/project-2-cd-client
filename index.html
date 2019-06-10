@@ -16,25 +16,40 @@
       <h1>Welcome to the Green Dragon Inn</h1>
     </header>
     <nav>
-      <div class="user-controls text-center col-3">
+      <div class="user-controls-not-logged text-center">
 
       <h5 id='message'>Welcome! </h5>
-      <form id="sign-up">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sign Up!
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <form id="sign-up" class='user'>
         <h3> Sign Up </h3>
-        <input type="text" class="form-control" name="credentials[email]" placeholder="Enter Email" required>
-        <input type="password" class="form-control" name="credentials[password]" placeholder="Password" required>
-        <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
-        <input  class="btn btn-primary" type="submit" value="Sign Up" />
+        <input type="text" class="dropdown-item form-control" name="credentials[email]" placeholder="Enter Email" required>
+        <input type="password" class="dropdown-item form-control" name="credentials[password]" placeholder="Password" required>
+        <input type="password" class="dropdown-item form-control" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
+        <input  class="dropdown-item btn btn-primary" type="submit" value="Sign Up" />
       </form>
+    </div>
+  </div>
       <br>
 
-      <form id="sign-in">
-        <h3> Sign In </h3>
-          <input type="text" class="form-control" name="credentials[email]" placeholder="Enter Email" required>
-          <input type="password" class="form-control" name="credentials[password]" placeholder="Password" required>
-          <input class="btn btn-primary" type="submit" value="Sign In" />
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sign In!
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <form id="sign-in" class='user'>
+          <h3> Sign In </h3>
+          <input type=" text" class="dropdown-item form-control" name="credentials[email]" placeholder="Enter Email" required>
+          <input type="password" class="dropdown-item form-control" name="credentials[password]" placeholder="Password" required>
+          <input class="dropdown-item btn btn-primary" type="submit" value="Sign In" />
       </form>
+    </div>
+    </div>
 
+    <div class="user-controls-logged text-center">
       <form id='sign-out'>
         <h3>Sign Out</h3>
         <input class="btn btn-primary" type="submit" value="Sign Out" />
@@ -47,9 +62,11 @@
         <input type="submit" class="btn btn-info" value="Change Password"/>
       </form>
     </div>
+
   <section>
     <button id="getGames" class="btn btn-info">Get Games!</button>
   </section>
+
   <form id="createGame">
     <h3>Create A Game!</h3>
     <input type='text' class="form-control" name="title" placeholder="Title" required/>

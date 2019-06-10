@@ -19,7 +19,16 @@
       {{game.start_date}}
     </h6>
     {{#if game.editable}}
-      <button type="submit" class="btn btn-info update-game">Edit</button>
+    <form id="updateGame">
+      <h3>Update Game!</h3>
+      <input type='text' class="form-control" name="game_lists[title]" placeholder="Title" required/>
+      <input type='text' class="form-control" name="game_lists[system]" placeholder="System" required/>
+      <input type='text' class="form-control" name="game_lists[player_count]" placeholder="Player Count" required/>
+      <input type='text' class="form-control" name="game_lists[sessions_count]" placeholder="Sessions Count" required/>
+      <input type='text' class="form-control" name="game_lists[description]" placeholder="Description" required/>
+      <input type='date' class="form-control" name="game_lists[start_date]" placeholder="Start Date" required/>
+      <button type="submit" class="btn btn-info update-game">Update</button>
+    </form>
       <button type="submit" class="btn btn-danger delete-game">Remove</button>
     {{/if}}
   </section>

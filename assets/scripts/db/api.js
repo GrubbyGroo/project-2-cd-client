@@ -33,8 +33,20 @@ const createGame = function (formData) {
   })
 }
 
+const updateGame = function (id, data) {
+  return $.ajax({
+    url: config.apiUrl + '/gamelist/' + data.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
+
 module.exports = {
   getGames,
   deleteGame,
-  createGame
+  createGame,
+  updateGame
 }

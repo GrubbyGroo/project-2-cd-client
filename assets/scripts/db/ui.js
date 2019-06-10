@@ -11,6 +11,13 @@ const getGamesSuccess = responseData => {
   $('.content').html(showGamesHtml)
 }
 
+const updateGameSuccess = responseData => {
+  $('#message').text('See the games below!')
+  const games = responseData.game_lists
+  console.log(games)
+  const showGamesHtml = showGamesTemplate({ fullGameList: games })
+  $('.content').html(showGamesHtml)
+}
 const getGamesFailure = responseData => {
   $('#message').text('Request Failed, Please Sign in to View!')
   $('form').trigger('reset')
@@ -30,5 +37,6 @@ module.exports = {
   getGamesSuccess,
   getGamesFailure,
   onCreateSuccess,
-  onCreateFailure
+  onCreateFailure,
+  updateGameSuccess
 }

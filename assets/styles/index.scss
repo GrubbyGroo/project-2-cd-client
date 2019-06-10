@@ -1,1 +1,16 @@
 @import '~bootstrap/scss/bootstrap';
+
+.user-controls-not-logged {
+  display: flex;
+  flex-direction: row;
+}
+
+.dropdown {
+  padding: 5px;
+}
+//
+// .user{
+//  display: flex;
+//  flex-direction: row;
+//  width: 50%;
+// }
