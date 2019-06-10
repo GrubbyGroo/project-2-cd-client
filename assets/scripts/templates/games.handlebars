@@ -21,12 +21,9 @@
     </h6>
     {{/if}}
     {{#if game.editable}}
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Edit this Game
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <form id="updateGame">
+    <button type="submit" class="btn btn-danger delete-game">Remove</button>
+    <button class="btnupdate btn btn-secondary" type='button'> Edit this Game </button>
+    <form id="updateGame" class='hidden'>
       <h3>Update Game!</h3>
       <input type='text' class="form-control" name="game_list[title]" placeholder="Title" required/>
       <input type='text' class="form-control" name="game_list[system]" placeholder="System" required/>
@@ -34,11 +31,10 @@
       <input type='text' class="form-control" name="game_list[sessions_count]" placeholder="Sessions Count" required/>
       <input type='text' class="form-control" name="game_list[description]" placeholder="Description" required/>
       <input type='date' class="form-control" name="game_list[start_date]" placeholder="Start Date" required/>
-      <button type="submit" class="btn btn-info update-game">Update</button>
+      <button type="submit" class="update btn btn-info update-game">Submit Update</button>
     </form>
   </div>
 </div>
-      <button type="submit" class="btn btn-danger delete-game">Remove</button>
     {{/if}}
   </section>
 {{/each}}

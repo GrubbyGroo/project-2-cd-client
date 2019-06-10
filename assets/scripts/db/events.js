@@ -38,9 +38,16 @@ const onUpdateGame = (event) => {
     .catch(ui.onCreateFailure)
 }
 
+const onShowUpdateGame = () => {
+  event.preventDefault()
+  ui.showUpdateGame()
+}
+
 const dbHandlers = () => {
   $('#getGames').on('click', onGetGames)
   $('#createGame').on('submit', onCreateGame)
+  $('.btnupdate').on('click', onShowUpdateGame)
+  $('.content').on('click', '.btnupdate', onShowUpdateGame)
   $('.content').on('click', '.delete-game', onDeleteGame)
   $('.content').on('submit', '#updateGame', onUpdateGame)
 }

@@ -35,10 +35,15 @@ const onCreateFailure = () => {
   $('form').trigger('reset')
 }
 
+const showUpdateGame = () => {
+  $('#updateGame').removeClass('hidden')
+}
+
 module.exports = {
   getGamesSuccess,
   getGamesFailure,
   onCreateSuccess,
   onCreateFailure,
-  updateGameSuccess
+  updateGameSuccess,
+  showUpdateGame
 }

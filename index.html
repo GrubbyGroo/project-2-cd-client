@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>The Green Dragon Inn</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>The Green Dragon Inn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-    <header>
-      <h1>Welcome to the Green Dragon Inn</h1>
-      <hr>
-      <h3>Welcome Traveler!</h3>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to the Green Dragon Inn</h1>
+    <hr>
+    <h3>Welcome Traveler!</h3>
     <h4> Come, Stay for a Spell and Tell us Stories of Your Adventures!</h4>
 
 
-      <h5 class='message' id='message'>Welcome! </h5>
-      <div class="user-controls-not-logged text-center">
+    <h5 class='message' id='message'>Welcome! </h5>
+    <div class="user-controls-not-logged text-center">
 
       <div class="dropdown not-logged-in">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           New To Town?
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <form id="sign-up" class='user'>
-        <h3> Sign Up </h3>
-        <input type="text" class="form-control" name="credentials[email]" placeholder="Enter Email" required>
-        <input type="password" class="form-control" name="credentials[password]" placeholder="Password" required>
-        <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
-        <input  class="btn btn-success" type="submit" value="Sign Up" />
-      </form>
-    </div>
-  </div>
+          <form id="sign-up" class='user'>
+            <h3> Sign Up </h3>
+            <input type="text" class="form-control" name="credentials[email]" placeholder="Enter Email" required>
+            <input type="password" class="form-control" name="credentials[password]" placeholder="Password" required>
+            <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
+            <input class="btn btn-success" type="submit" value="Sign Up" />
+          </form>
+        </div>
+      </div>
       <br>
 
       <div class="dropdown not-logged-in">
@@ -43,58 +45,59 @@
           Been Here Before?
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <form id="sign-in" class='user'>
-          <h3> Sign In </h3>
-          <input type=" text" class="form-control" name="credentials[email]" placeholder="Enter Email" required>
-          <input type="password" class="form-control" name="credentials[password]" placeholder="Password" required>
-          <input class="btn btn-success" type="submit" value="Sign In" />
-      </form>
-    </div>
-    </div>
+          <form id="sign-in" class='user'>
+            <h3> Sign In </h3>
+            <input type=" text" class="form-control" name="credentials[email]" placeholder="Enter Email" required>
+            <input type="password" class="form-control" name="credentials[password]" placeholder="Password" required>
+            <input class="btn btn-success" type="submit" value="Sign In" />
+          </form>
+        </div>
+      </div>
 
-    <div class="user-controls-logged logged-in text-center hidden">
-      <form id='sign-out'>
-        <input class="btn btn-secondary" type="submit" value="Sign Out" />
-      </form>
+      <div class="user-controls-logged logged-in text-center hidden">
+        <form id='sign-out'>
+          <input class="btn btn-secondary" type="submit" value="Sign Out" />
+        </form>
 
-      <div class="dropdown user-controls-logged">
-        <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Update Password
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <form id="change-pw">
-        <h3>Change Password</h3>
-        <input type='password' class="form-control" name="passwords[old]" placeholder="Current Password" required/>
-        <input type='password' class="form-control" name="passwords[new]" placeholder="New Password" required/>
-        <input type="submit" class="btn btn-success" value="Change Password"/>
-      </form>
-    </div>
-  </div>
+        <div class="dropdown user-controls-logged">
+          <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Update Password
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <form id="change-pw">
+              <h3>Change Password</h3>
+              <input type='password' class="form-control" name="passwords[old]" placeholder="Current Password" required />
+              <input type='password' class="form-control" name="passwords[new]" placeholder="New Password" required />
+              <input type="submit" class="btn btn-success" value="Change Password" />
+            </form>
+          </div>
+        </div>
 
-    <button id="getGames" class="logged-in btn btn-warning hidden">Get All Games!</button>
+        <button id="getGames" class="logged-in btn btn-warning hidden">Get All Games!</button>
 
-  <div class="dropdown user-controls-logged">
-    <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Create a New Adventure
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-  <form id="createGame" class='logged-in hidden'>
-    <h3>Create A Game!</h3>
-    <input type='text' class="form-control" name="title" placeholder="Title" required/>
-    <input type='text' class="form-control" name="system" placeholder="System" required/>
-    <input type='text' class="form-control" name="player_count" placeholder="Player Count" required/>
-    <input type='text' class="form-control" name="sessions_count" placeholder="Sessions Count" required/>
-    <input type='text' class="form-control" name="description" placeholder="Description" required/>
-    <input type='date' class="form-control" name="start_date" placeholder="Start Date" required/>
-    <input type="submit" class="btn btn-success" value="Create Game!"/>
-  </form>
+        <div class="dropdown user-controls-logged">
+          <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Create a New Adventure
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <form id="createGame" class='logged-in hidden'>
+              <h3>Create A Game!</h3>
+              <input type='text' class="form-control" name="title" placeholder="Title" required />
+              <input type='text' class="form-control" name="system" placeholder="System" required />
+              <input type='text' class="form-control" name="player_count" placeholder="Player Count" required />
+              <input type='text' class="form-control" name="sessions_count" placeholder="Sessions Count" required />
+              <input type='text' class="form-control" name="description" placeholder="Description" required />
+              <input type='date' class="form-control" name="start_date" placeholder="Start Date" required />
+              <input type="submit" class="btn btn-success" value="Create Game!" />
+            </form>
 
-</div>
-</div>
-</header>
-<hr>
+          </div>
+        </div>
+  </header>
+  <hr>
   <main>
-      <div id="content" class="content logged-in hidden"></div>
-    </main>
-    </body>
+    <div id="content" class="content logged-in hidden"></div>
+  </main>
+</body>
+
 </html>
