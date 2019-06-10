@@ -7,6 +7,35 @@
   justify-content: center;
 }
 
+.message {
+  color: #8ad370;
+}
+
+h6 {
+  color: blue;
+}
+
+.dropdown-menu {
+  width: 5rem;
+}
+
+.btn-secondary {
+  width: 15rem;
+}
+
+section {
+  border: 1px solid;
+  text-align: center;
+  padding: 5px;
+}
+
+.user-controls-logged {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
 .dropdown {
   padding-left: 20px;
 }

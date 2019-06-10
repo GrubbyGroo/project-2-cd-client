@@ -6,6 +6,7 @@ const showGamesTemplate = require('../templates/games.handlebars')
 const getGamesSuccess = responseData => {
   $('#message').text('See the games below!')
   $('form').trigger('reset')
+  $('.content').removeClass('hidden')
   const games = responseData.game_lists
   console.log(games)
   const showGamesHtml = showGamesTemplate({ fullGameList: games })

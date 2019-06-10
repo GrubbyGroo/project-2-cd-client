@@ -1,4 +1,5 @@
 {{#each fullGameList as |game|}}
+{{#if game.editable}}
   <section data-id="{{game.id}}">
     <h6>Title:
       {{game.title}}
@@ -18,6 +19,7 @@
     <h6>Start Date:
       {{game.start_date}}
     </h6>
+    {{/if}}
     {{#if game.editable}}
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -26,13 +28,13 @@
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <form id="updateGame">
       <h3>Update Game!</h3>
-      <input type='text' class="dropdown-item form-control" name="game_list[title]" placeholder="Title" required/>
-      <input type='text' class="dropdown-item form-control" name="game_list[system]" placeholder="System" required/>
-      <input type='text' class="dropdown-item form-control" name="game_list[player_count]" placeholder="Player Count" required/>
-      <input type='text' class="dropdown-item form-control" name="game_list[sessions_count]" placeholder="Sessions Count" required/>
-      <input type='text' class="dropdown-item form-control" name="game_list[description]" placeholder="Description" required/>
-      <input type='date' class="dropdown-item form-control" name="game_list[start_date]" placeholder="Start Date" required/>
-      <button type="submit" class="dropdown-item btn btn-info update-game">Update</button>
+      <input type='text' class="form-control" name="game_list[title]" placeholder="Title" required/>
+      <input type='text' class="form-control" name="game_list[system]" placeholder="System" required/>
+      <input type='text' class="form-control" name="game_list[player_count]" placeholder="Player Count" required/>
+      <input type='text' class="form-control" name="game_list[sessions_count]" placeholder="Sessions Count" required/>
+      <input type='text' class="form-control" name="game_list[description]" placeholder="Description" required/>
+      <input type='date' class="form-control" name="game_list[start_date]" placeholder="Start Date" required/>
+      <button type="submit" class="btn btn-info update-game">Update</button>
     </form>
   </div>
 </div>
@@ -40,3 +42,27 @@
     {{/if}}
   </section>
 {{/each}}
+
+<section>
+{{#each fullGameList as |game|}}
+  <section data-id="{{game.id}}">
+    <h6>Title:
+      {{game.title}}
+    </h6>
+    <h6>System:
+      {{game.system}}
+    </h6>
+    <h6>How Many Players:
+      {{game.player_count}}
+    </h6>
+    <h6>How Many Sessions:
+      {{game.sessions_count}}
+    </h6>
+    <h6>Description:
+      {{game.description}}
+    </h6>
+    <h6>Start Date:
+      {{game.start_date}}
+    </h6>
+      </section>
+    {{/each}}

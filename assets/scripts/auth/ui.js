@@ -17,6 +17,8 @@ const onSignInSuccess = responseData => {
   $('#message').text('Signed In, Welcome Back!')
   $('form').trigger('reset')
   store.user = responseData.user
+  $('.logged-in').removeClass('hidden')
+  $('.not-logged-in, .content').addClass('hidden')
 }
 const onSignInFailure = responseData => {
   $('#message').text('Sign In Failed, Please try again!')
@@ -36,6 +38,8 @@ const onChangePasswordFailure = responseData => {
 const onSignOutSuccess = responseData => {
   $('#message').text('Sign Out Success, See you soon!')
   $('form').trigger('reset')
+  $('.logged-in').addClass('hidden')
+  $('.not-logged-in').removeClass('hidden')
 }
 
 const onSignOutFailure = responseData => {
