@@ -1,7 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
+  width: 100%;
+  background-color: #e8d0b9;
+}
 
+header {
+  background-color: white;
 }
 
 section {
@@ -9,11 +14,14 @@ section {
   background: white;
   border: 1px solid;
   outline: none;
-  padding: 1rem;
+  padding: 8px;
+  border-radius: 10px;
 }
 
 .content {
+  display:flex;
   @include make-row;
+  justify-content: center;
 }
 
 .user-controls-not-logged {
@@ -36,11 +44,14 @@ h6 {
 }
 
 .dropdown-menu {
-  width: 10rem;
+  width: 20rem;
 }
 
-.btn-secondary {
+.btn-secondary,
+.btn-warning {
   width: 15rem;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .user-controls-logged {
@@ -51,7 +62,8 @@ h6 {
 }
 
 .dropdown {
-  padding-left: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .message {

@@ -2,6 +2,7 @@
 
 // const store = require('../store.js')
 const showGamesTemplate = require('../templates/games.handlebars')
+const showYourGamesTemplate = require('../templates/gamesowned.handlebars')
 
 const getGamesSuccess = responseData => {
   $('#message').text('See the games below!')
@@ -10,6 +11,16 @@ const getGamesSuccess = responseData => {
   const games = responseData.game_lists
   console.log(games)
   const showGamesHtml = showGamesTemplate({ fullGameList: games })
+  $('.content').html(showGamesHtml)
+}
+
+const getYourGameSuccess = responseData => {
+  $('#message').text('See the games below!')
+  $('form').trigger('reset')
+  $('.content').removeClass('hidden')
+  const games = responseData.game_lists
+  console.log(games)
+  const showGamesHtml = showYourGamesTemplate({ fullGameList: games })
   $('.content').html(showGamesHtml)
 }
 
@@ -45,5 +56,6 @@ module.exports = {
   onCreateSuccess,
   onCreateFailure,
   updateGameSuccess,
-  showUpdateGame
+  showUpdateGame,
+  getYourGameSuccess
 }

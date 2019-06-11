@@ -1,4 +1,5 @@
 {{#each fullGameList as |game|}}
+{{#if game.editable}}
   <section data-id="{{game.id}}">
     <h6>Title:
       <span>{{game.title}}</span>
@@ -18,6 +19,7 @@
     <h6>Start Date:
       <span>{{game.start_date}}</span>
     </h6>
+    {{/if}}
     {{#if game.editable}}
     <button type="submit" class="btn btn-danger delete-game">Remove</button>
     <button class="btnupdate btn btn-info" type='button'> Edit </button>

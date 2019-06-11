@@ -38,7 +38,6 @@
           </form>
         </div>
       </div>
-      <br>
 
       <div class="dropdown not-logged-in">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -60,12 +59,12 @@
         </form>
 
         <div class="dropdown user-controls-logged">
-          <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Update Password
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <form id="change-pw">
-              <h3>Change Password</h3>
+              <!-- <h3>Change Password</h3> -->
               <input type='password' class="form-control" name="passwords[old]" placeholder="Current Password" required />
               <input type='password' class="form-control" name="passwords[new]" placeholder="New Password" required />
               <input type="submit" class="btn btn-success" value="Change Password" />
@@ -74,6 +73,7 @@
         </div>
 
         <button id="getGames" class="logged-in btn btn-warning hidden">Get All Games!</button>
+        <button id="getYourGames" class="logged-in btn btn-warning hidden">Get Your Games!</button>
 
         <div class="dropdown user-controls-logged">
           <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -94,7 +94,7 @@
           </div>
         </div>
   </header>
-  <hr>
+
   <main>
     <div id="content" class="content logged-in hidden"></div>
   </main>
