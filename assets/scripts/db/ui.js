@@ -4,7 +4,8 @@
 const showGamesTemplate = require('../templates/games.handlebars')
 
 const getGamesSuccess = responseData => {
-  $('#message').text('See the Adventures below!')
+  $('#message').stop(true, true).text('Success, See Below!').fadeIn()
+  $('#message').stop(true, true).fadeOut(5000)
   $('form').trigger('reset')
   $('.content').removeClass('hidden')
   const games = responseData.game_lists
@@ -12,7 +13,6 @@ const getGamesSuccess = responseData => {
     if (a.editable === true) return -1
     if (a.editable === false) return 1
   })
-  console.log(newData)
   const showGamesHtml = showGamesTemplate({
     fullGameList: newData
   })
@@ -22,7 +22,6 @@ const getGamesSuccess = responseData => {
 const updateGameSuccess = responseData => {
   $('#message').text('See the New Adventure below!')
   const games = responseData.game_lists
-  console.log(games)
   const showGamesHtml = showGamesTemplate({
     fullGameList: games
   })

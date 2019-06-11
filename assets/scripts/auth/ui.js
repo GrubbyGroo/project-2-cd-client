@@ -3,7 +3,6 @@
 const store = require('../store.js')
 
 const onSignUpSuccess = responseData => {
-  console.log(responseData)
   $('#message').text('Thanks for Joining Us! Please log in!')
   $('form').trigger('reset')
 }
@@ -26,12 +25,14 @@ const onSignInFailure = responseData => {
 }
 
 const onChangePasswordSuccess = responseData => {
-  $('#message').text('Password Changed Successfully!')
+  $('#errormessage').stop(true, true).text('Password Changed Successfully!').fadeIn()
+  $('#errormessage').stop(true, true).fadeOut(5000)
   $('form').trigger('reset')
 }
 
 const onChangePasswordFailure = responseData => {
-  $('#message').text('Password Change Failed, Try Again!')
+  $('#errormessage').stop(true, true).text('Password Change Failed, Try Again!').fadeIn()
+  $('#errormessage').stop(true, true).fadeOut(5000)
   $('form').trigger('reset')
 }
 
