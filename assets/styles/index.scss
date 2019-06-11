@@ -7,15 +7,19 @@ body {
 
 header {
   background-color: #e8b9ba;
+  background-image: url("https://cdn.pixabay.com/photo/2014/05/07/19/30/scroll-339852_1280.png");
+  background-position: center;
+  font-family: 'Kalam', cursive;
 }
+
 
 section {
   width: 30%;
-  background: white;
+  background: #d5a97f;
   border: 1px solid;
   outline: none;
   padding: 8px;
-  border-radius: 10px;
+  border-radius: 10px/30px
 }
 
 .content {
@@ -33,12 +37,9 @@ section {
 }
 
 span {
-  color: #8ad370;
+  color: #bae8b9;
 }
 
-.message {
-  color: #8ad370;
-}
 
 h6 {
   color: blue;
@@ -50,6 +51,7 @@ h6 {
 
 .btn-secondary,
 .btn-warning {
+  font-weight: bold;
   width: 15rem;
   margin-left: 5px;
   margin-right: 5px;
@@ -69,6 +71,7 @@ h6 {
 
 .message {
   text-align: center;
+  color: #195e00;
 }
 
 header {

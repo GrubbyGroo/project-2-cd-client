@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
   <title>The Green Dragon Inn</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,12 +17,12 @@
 <body>
   <header>
     <h1>Welcome to the Green Dragon Inn</h1>
-    <hr>
+    <br>
     <h3>Welcome Traveler!</h3>
     <h4> Come, Stay for a Spell and Tell us Stories of Your Adventures!</h4>
 
 
-    <h5 class='message' id='message'>Welcome! </h5>
+    <h5 class='message' id='message'> </h5>
     <div class="user-controls-not-logged text-center">
 
       <div class="dropdown not-logged-in">
@@ -30,11 +31,10 @@
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <form id="sign-up" class='user'>
-            <h3> Sign Up </h3>
             <input type="text" class="form-control" name="credentials[email]" placeholder="Enter Email" required>
             <input type="password" class="form-control" name="credentials[password]" placeholder="Password" required>
             <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
-            <input class="btn btn-success" type="submit" value="Sign Up" />
+            <input class="btn btn-success" type="submit" value="Good to Have You!" />
           </form>
         </div>
       </div>
@@ -45,22 +45,21 @@
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <form id="sign-in" class='user'>
-            <h3> Sign In </h3>
             <input type=" text" class="form-control" name="credentials[email]" placeholder="Enter Email" required>
             <input type="password" class="form-control" name="credentials[password]" placeholder="Password" required>
-            <input class="btn btn-success" type="submit" value="Sign In" />
+            <input class="btn btn-success" type="submit" value="Good to See You Again!" />
           </form>
         </div>
       </div>
 
       <div class="user-controls-logged logged-in text-center hidden">
         <form id='sign-out'>
-          <input class="btn btn-secondary" type="submit" value="Sign Out" />
+          <input class="btn btn-secondary" type="submit" value="Be On Your Way!" />
         </form>
 
         <div class="dropdown user-controls-logged">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Update Password
+            Change Your Secret Code
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <form id="change-pw">
@@ -74,24 +73,24 @@
 
         <div class="dropdown user-controls-logged">
           <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Create a New Adventure
+            Log a New Adventure
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <form id="createGame" class='logged-in hidden'>
-              <h3>Create A Game!</h3>
               <input type='text' class="form-control" name="title" placeholder="Title" required />
               <input type='text' class="form-control" name="system" placeholder="System" required />
               <input type='text' class="form-control" name="player_count" placeholder="Player Count" required />
               <input type='text' class="form-control" name="sessions_count" placeholder="Sessions Count" required />
               <input type='text' class="form-control" name="description" placeholder="Description" required />
-              <input type='date' class="form-control" name="start_date" placeholder="Start Date" required />
+              Start Date
+              <input type='date' class="form-control" name="start_date" placeholder="Start Date" required>
               <input type="submit" class="btn btn-success" value="Create Game!" />
             </form>
 
           </div>
         </div>
 
-        <button id="getGames" class="logged-in btn btn-warning hidden">Get All Games!</button>
+        <button id="getGames" class="logged-in btn btn-warning hidden">View All Adventures!</button>
   </header>
 
   <main>
