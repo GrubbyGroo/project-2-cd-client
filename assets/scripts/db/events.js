@@ -16,7 +16,7 @@ const onGetYourGames = event => {
   event.preventDefault()
   const form = (event.target)
   const formData = getFormFields(form)
-
+  console.log(formData)
   api.getGames(formData)
     .then(ui.getYourGameSuccess)
     .catch(ui.getGamesFailure)

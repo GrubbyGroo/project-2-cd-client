@@ -9,8 +9,14 @@ const getGamesSuccess = responseData => {
   $('form').trigger('reset')
   $('.content').removeClass('hidden')
   const games = responseData.game_lists
-  console.log(games)
-  const showGamesHtml = showGamesTemplate({ fullGameList: games })
+  const newData = games.sort(function (a) {
+    if (a.editable === true) return -1
+    if (a.editable === false) return 1
+  })
+  console.log(newData)
+  const showGamesHtml = showGamesTemplate({
+    fullGameList: newData
+  })
   $('.content').html(showGamesHtml)
 }
 
@@ -19,8 +25,14 @@ const getYourGameSuccess = responseData => {
   $('form').trigger('reset')
   $('.content').removeClass('hidden')
   const games = responseData.game_lists
-  console.log(games)
-  const showGamesHtml = showYourGamesTemplate({ fullGameList: games })
+  const newData = games.sort(function (a, b) {
+    if (a.start_date > b.start_date) return 1
+    if (a.start_date < b.start_date) return -1
+  })
+  console.log(newData)
+  const showGamesHtml = showYourGamesTemplate({
+    fullGameList: newData
+  })
   $('.content').html(showGamesHtml)
 }
 
@@ -28,7 +40,9 @@ const updateGameSuccess = responseData => {
   $('#message').text('See the New Game below!')
   const games = responseData.game_lists
   console.log(games)
-  const showGamesHtml = showGamesTemplate({ fullGameList: games })
+  const showGamesHtml = showGamesTemplate({
+    fullGameList: games
+  })
   $('.content').html(showGamesHtml)
 }
 const getGamesFailure = responseData => {
