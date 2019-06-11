@@ -6,6 +6,7 @@ const showGamesTemplate = require('../templates/games.handlebars')
 const getGamesSuccess = responseData => {
   $('#message').stop(true, true).text('Success, See Below!').fadeIn()
   $('#message').stop(true, true).fadeOut(5000)
+  $('#errormessage').stop(true, true)
   $('form').trigger('reset')
   $('.content').removeClass('hidden')
   const games = responseData.game_lists

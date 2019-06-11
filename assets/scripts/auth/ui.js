@@ -13,14 +13,16 @@ const onSignUpFailure = responseData => {
 }
 
 const onSignInSuccess = responseData => {
-  $('#message').text('Checked in, Welcome Back!')
+  $('#errormessage').stop(true, true).text('Checked in, Welcome Back!').fadeIn()
+  $('#errormessage').stop(true, true).fadeOut(5000)
   $('form').trigger('reset')
   store.user = responseData.user
   $('.logged-in').removeClass('hidden')
   $('.not-logged-in, .content').addClass('hidden')
 }
 const onSignInFailure = responseData => {
-  $('#message').text('Sign In Failed, Please try again!')
+  $('#errormessage').stop(true, true).text('Sign In Failed, Please try again!').fadeIn()
+  $('#errormessage').stop(true, true).fadeOut(5000)
   $('form').trigger('reset')
 }
 
@@ -37,14 +39,17 @@ const onChangePasswordFailure = responseData => {
 }
 
 const onSignOutSuccess = responseData => {
-  $('#message').text('Thanks for Coming, Come Back Again Soon!')
+  $('#errormessage').stop(true, true).text('Thanks for Coming, Come Back Again Soon!').fadeIn()
+  $('#errormessage').stop(true, true).fadeOut(5000)
+  $('#message').stop(true, true)
   $('form').trigger('reset')
   $('.logged-in').addClass('hidden')
   $('.not-logged-in').removeClass('hidden')
 }
 
 const onSignOutFailure = responseData => {
-  $('#message').text('Sign Out Failed, Please try again!')
+  $('#errormessage').stop(true, true).text('Sign Out Failed, Please try again!').fadeIn()
+  $('#errormessage').stop(true, true).fadeOut(5000)
   $('form').trigger('reset')
 }
 
