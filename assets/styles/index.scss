@@ -9,7 +9,15 @@ header {
   background-color: #e8b9ba;
   background-image: url("https://cdn.pixabay.com/photo/2014/05/07/19/30/scroll-339852_1280.png");
   background-position: center;
-  font-family: 'Kalam', cursive;
+  font-family: 'Pangolin', cursive;
+}
+
+footer {
+  margin-top: 20rem;
+  display:flex;
+  justify-content: center;
+  background-color: #e8b9ba;
+  height: 2rem;
 }
 
 
@@ -37,9 +45,15 @@ section {
 }
 
 span {
-  color: #bae8b9;
+  color: #473525;;
 }
 
+h1 {
+  font-family: 'Finger Paint', cursive;
+  text-decoration: underline;
+  padding-top: 20px;
+  color: #473525;
+}
 
 h6 {
   color: blue;
@@ -49,12 +63,20 @@ h6 {
   width: 20rem;
 }
 
+.btn-primary {
+  font-weight: bold;
+  width: 15rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .btn-secondary,
 .btn-warning {
   font-weight: bold;
   width: 15rem;
   margin-left: 5px;
   margin-right: 5px;
+  box-shadow: 8px 0px 15px rgba(0, 0, 0, 0.4);
 }
 
 .user-controls-logged {

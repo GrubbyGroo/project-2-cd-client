@@ -2,7 +2,8 @@
 <html>
 
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pangolin&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Finger+Paint&display=swap" rel="stylesheet">
   <title>The Green Dragon Inn</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -96,6 +97,68 @@
   <main>
     <div id="content" class="content logged-in hidden"></div>
   </main>
+
 </body>
+<footer>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#projectInfoModal">
+    About the Project
+  </button>
+  <div class="modal fade" id="projectInfoModal" tabindex="-1" role="dialog" aria-labelledby="aboutModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="aboutModal">About The Project</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          At a high level, here are the goals developers had for this project:
+          <ul>
+            <br>
+            <li>Use a front-end Javascript app to communicate with your API and render data received in the browser.</li>
+            <li>User must be able to create a new resource</li>
+            <li>User must be able to update a resource</li>
+            <li>User must be able to delete a resource</li>
+            <li>User must be able to view a single or multiple resource(s)</li>
+            <li>All resource actions that change data must only be available to a signed in user.</li>
+            <li>Give feedback to the user after each action's success or failure.</li>
+
+            <li>Build an API using Ruby on Rails and Postgresql.</li>
+            <li>Create at least 4 RESTful routes for handling GET, POST, PUT/PATCH, and DELETE requests.</li>
+            <li>Any actions which change data must be authenticated and the data must be "owned" by the user performing the change.</li>
+            <li>Have at least 1 resource that has a relationship to User</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#aboutMeModal">
+    About the Engineer
+  </button>
+  <div class="modal fade" id="aboutMeModal" tabindex="-1" role="dialog" aria-labelledby="aboutModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="aboutModal">About The Engineer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Cameron DiGregorio is a Software Engineering Fellow at General Assembly
+          <a href="https://www.linkedin.com/in/cdigregorio/" target="_blank">View My LinkedIn</a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </html>
