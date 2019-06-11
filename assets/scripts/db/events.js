@@ -12,22 +12,12 @@ const onGetGames = event => {
     .catch(ui.getGamesFailure)
 }
 
-const onGetYourGames = event => {
-  event.preventDefault()
-  const form = (event.target)
-  const formData = getFormFields(form)
-  console.log(formData)
-  api.getGames(formData)
-    .then(ui.getYourGameSuccess)
-    .catch(ui.getGamesFailure)
-}
-
 const onCreateGame = event => {
   event.preventDefault()
   const form = (event.target)
   const formData = getFormFields(form)
   api.createGame({game_list: formData})
-    .then(() => onGetYourGames(event))
+    .then(() => onGetGames(event))
     .catch(ui.onCreateFailure)
 }
 
@@ -44,7 +34,7 @@ const onUpdateGame = (event) => {
   const gameId = $(event.target).closest('section').data('id')
   const formData = getFormFields(event.target)
   api.updateGame(gameId, formData)
-    .then(() => onGetYourGames(event))
+    .then(() => onGetGames(event))
     .catch(ui.onCreateFailure)
 }
 
@@ -55,7 +45,6 @@ const onShowUpdateGame = () => {
 
 const dbHandlers = () => {
   $('#getGames').on('click', onGetGames)
-  $('#getYourGames').on('click', onGetYourGames)
   $('#createGame').on('submit', onCreateGame)
   $('.btnupdate').on('click', onShowUpdateGame)
   $('.content').on('click', '.btnupdate', onShowUpdateGame)
