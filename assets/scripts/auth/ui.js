@@ -4,7 +4,7 @@ const store = require('../store.js')
 
 const onSignUpSuccess = responseData => {
   console.log(responseData)
-  $('#message').text('Signed up Successfully! Please log in to Play!')
+  $('#message').text('Thanks for Joining Us! Please log in!')
   $('form').trigger('reset')
 }
 
@@ -14,7 +14,7 @@ const onSignUpFailure = responseData => {
 }
 
 const onSignInSuccess = responseData => {
-  $('#message').text('Signed In, Welcome Back!')
+  $('#message').text('Checked in, Welcome Back!')
   $('form').trigger('reset')
   store.user = responseData.user
   $('.logged-in').removeClass('hidden')
@@ -36,7 +36,7 @@ const onChangePasswordFailure = responseData => {
 }
 
 const onSignOutSuccess = responseData => {
-  $('#message').text('Sign Out Success, See you soon!')
+  $('#message').text('Thanks for Coming, Come Back Again Soon!')
   $('form').trigger('reset')
   $('.logged-in').addClass('hidden')
   $('.not-logged-in').removeClass('hidden')

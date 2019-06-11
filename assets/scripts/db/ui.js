@@ -4,7 +4,7 @@
 const showGamesTemplate = require('../templates/games.handlebars')
 
 const getGamesSuccess = responseData => {
-  $('#message').text('See the games below!')
+  $('#message').text('See the Adventures below!')
   $('form').trigger('reset')
   $('.content').removeClass('hidden')
   const games = responseData.game_lists
@@ -20,7 +20,7 @@ const getGamesSuccess = responseData => {
 }
 
 const updateGameSuccess = responseData => {
-  $('#message').text('See the New Game below!')
+  $('#message').text('See the New Adventure below!')
   const games = responseData.game_lists
   console.log(games)
   const showGamesHtml = showGamesTemplate({
