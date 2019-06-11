@@ -44,7 +44,7 @@ const onUpdateGame = (event) => {
   const gameId = $(event.target).closest('section').data('id')
   const formData = getFormFields(event.target)
   api.updateGame(gameId, formData)
-    .then(() => onGetGames(event))
+    .then(() => onGetYourGames(event))
     .catch(ui.onCreateFailure)
 }
 

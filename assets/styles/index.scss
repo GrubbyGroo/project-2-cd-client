@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: white;
+  background-color: #e8b9ba;
 }
 
 section {
@@ -19,6 +19,7 @@ section {
 }
 
 .content {
+  margin-top: 20px;
   display:flex;
   @include make-row;
   justify-content: center;

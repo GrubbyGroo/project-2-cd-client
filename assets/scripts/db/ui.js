@@ -15,7 +15,7 @@ const getGamesSuccess = responseData => {
 }
 
 const getYourGameSuccess = responseData => {
-  $('#message').text('See the games below!')
+  $('#message').text('Success, See below!')
   $('form').trigger('reset')
   $('.content').removeClass('hidden')
   const games = responseData.game_lists
@@ -25,7 +25,7 @@ const getYourGameSuccess = responseData => {
 }
 
 const updateGameSuccess = responseData => {
-  $('#message').text('See the games below!')
+  $('#message').text('See the New Game below!')
   const games = responseData.game_lists
   console.log(games)
   const showGamesHtml = showGamesTemplate({ fullGameList: games })

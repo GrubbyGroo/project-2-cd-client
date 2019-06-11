@@ -1,4 +1,5 @@
 {{#each fullGameList as |game|}}
+
   <section data-id="{{game.id}}">
     <h6>Title:
       <span>{{game.title}}</span>
@@ -18,10 +19,17 @@
     <h6>Start Date:
       <span>{{game.start_date}}</span>
     </h6>
+
     {{#if game.editable}}
+
+
+    <div class="dropdown">
     <button type="submit" class="btn btn-danger delete-game">Remove</button>
-    <button class="btnupdate btn btn-info" type='button'> Edit </button>
-    <form id="updateGame" class='hidden'>
+  <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Edit Game
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <form id="updateGame" class=>
       <h3>Update Game!</h3>
       <input type='text' class="form-control" name="game_list[title]" placeholder="Title" required/>
       <input type='text' class="form-control" name="game_list[system]" placeholder="System" required/>
@@ -31,6 +39,8 @@
       <input type='date' class="form-control" name="game_list[start_date]" placeholder="Start Date" required/>
       <button type="submit" class="update btn btn-info update-game">Submit Update</button>
     </form>
+  </div>
+</div>
 
     {{/if}}
  </section>
