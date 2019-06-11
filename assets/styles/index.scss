@@ -13,7 +13,7 @@ header {
 }
 
 footer {
-  margin-top: 20rem;
+  margin-top: 1rem;
   display:flex;
   justify-content: center;
   background-color: #e8b9ba;
@@ -28,6 +28,19 @@ section {
   outline: none;
   padding: 8px;
   border-radius: 10px/30px
+}
+
+.about {
+  width: 50%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20rem;
+  margin-top: 1rem;
+  font-family: 'Roboto', sans-serif;
+  border: 15px inset rgba(164,76,23,0.25);
+  border-radius: 40px 40px 40px 40px;
 }
 
 .content {
@@ -91,7 +104,8 @@ h6 {
   padding-right: 5px;
 }
 
-.message {
+.message,
+.errormessage {
   text-align: center;
   color: #195e00;
 }

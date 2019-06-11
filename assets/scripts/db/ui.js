@@ -9,6 +9,7 @@ const getGamesSuccess = responseData => {
   $('#errormessage').stop(true, true)
   $('form').trigger('reset')
   $('.content').removeClass('hidden')
+  $('.about').addClass('hidden')
   const games = responseData.game_lists
   const newData = games.sort(function (a) {
     if (a.editable === true) return -1

@@ -29,6 +29,7 @@ const onSignInFailure = responseData => {
 const onChangePasswordSuccess = responseData => {
   $('#errormessage').stop(true, true).text('Password Changed Successfully!').fadeIn()
   $('#errormessage').stop(true, true).fadeOut(5000)
+  $('#message').stop(true, true)
   $('form').trigger('reset')
 }
 
@@ -44,7 +45,7 @@ const onSignOutSuccess = responseData => {
   $('#message').stop(true, true)
   $('form').trigger('reset')
   $('.logged-in').addClass('hidden')
-  $('.not-logged-in').removeClass('hidden')
+  $('.not-logged-in, .about').removeClass('hidden')
 }
 
 const onSignOutFailure = responseData => {
