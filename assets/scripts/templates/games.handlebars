@@ -32,8 +32,8 @@
           <form id="updateGame" class=>
             <input type='text' class="form-control" name="game_list[title]" placeholder="Title" required />
             <input type='text' class="form-control" name="game_list[system]" placeholder="System" required />
-            <input type='text' class="form-control" name="game_list[player_count]" placeholder="Player Count" required />
-            <input type='text' class="form-control" name="game_list[sessions_count]" placeholder="Sessions Count" required />
+            <input type='number' min='1' max='100'  class="form-control" name="game_list[player_count]" placeholder="Player Count" required />
+            <input type='number' min='1' max='100'  class="form-control" name="game_list[sessions_count]" placeholder="Sessions Count" required />
             <input type='textarea' class="form-control" name="game_list[description]" placeholder="Description" rows='4' required />
             Start Date <input type='date' class="form-control" name="game_list[start_date]" placeholder="Start Date" required />
             <button type="submit" class="update btn btn-info update-game">Submit Update</button>
