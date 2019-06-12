@@ -3,12 +3,14 @@
 const store = require('../store.js')
 
 const onSignUpSuccess = responseData => {
-  $('#message').text('Thanks for Joining Us! Please log in!')
+  $('#errormessage').stop(true, true).text('Thank you for joining us, please log in!').fadeIn()
+  $('#errormessage').stop(true, true).fadeOut(5000)
   $('form').trigger('reset')
 }
 
 const onSignUpFailure = responseData => {
-  $('#message').text('Sign Up Failed, Please try again!')
+  $('#errormessage').stop(true, true).text('Sign Up Failed, Please Try Again!').fadeIn()
+  $('#errormessage').stop(true, true).fadeOut(5000)
   $('form').trigger('reset')
 }
 

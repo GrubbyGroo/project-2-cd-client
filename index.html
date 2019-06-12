@@ -84,8 +84,8 @@
             <form id="createGame" class='logged-in hidden'>
               <input type='text' class="form-control" name="title" placeholder="Game Name" required />
               <input type='text' class="form-control" name="system" placeholder="Game System" required />
-              <input type='text' class="form-control" name="player_count" placeholder="Player Count" required />
-              <input type='text' class="form-control" name="sessions_count" placeholder="Sessions Count" required />
+              <input type='number' min='1' max='100' class="form-control" name="player_count" placeholder="Player Count" required />
+              <input type='number' min='1' max='100'  class="form-control" name="sessions_count" placeholder="Sessions Count" required />
               <input type='text' class="form-control" name="description" placeholder="Description" required />
               Start Date
               <input type='date' class="form-control" name="start_date" placeholder="Start Date" required>
