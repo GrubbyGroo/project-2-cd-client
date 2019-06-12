@@ -48,11 +48,11 @@ section {
 }
 
 .content {
+  font-family: 'Source Sans Pro', sans-serif;
   margin-top: 20px;
   display:flex;
   @include make-row;
   justify-content: center;
-
 }
 
 .user-controls-not-logged {
@@ -63,7 +63,8 @@ section {
 }
 
 span {
-  color: #473525;
+  color: black;
+  font-size: 18px;
 }
 
 h1 {
@@ -74,7 +75,8 @@ h1 {
 }
 
 h6 {
-  color: blue;
+  color: #3335a5;
+  font-size: 20px;
 }
 
 .dropdown-menu {

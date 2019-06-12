@@ -1,10 +1,10 @@
 {{#each fullGameList as |game|}}
 
   <section data-id="{{game.id}}">
-    <h6>Title:
+    <h6>Game Name
       <span>{{game.title}}</span>
-    </h6><span>
-    <h6>System:
+    </h6>
+    <h6>Game System:
       <span>{{game.system}}</span>
     </h6>
     <h6>How Many Players:
@@ -12,7 +12,7 @@
     </h6>
     <h6>How Many Sessions:
       <span>{{game.sessions_count}}</span>
-    </h6></span>
+    </h6>
     <h6>Description:
       <span>{{game.description}}</span>
     </h6>
@@ -21,26 +21,26 @@
     </h6>
 
     {{#if game.editable}}
+      <hr>
 
-
-    <div class="dropdown">
-    <button type="submit" class="btn btn-danger delete-game">Remove</button>
-  <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Edit Game
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <form id="updateGame" class=>
-      <input type='text' class="form-control" name="game_list[title]" placeholder="Title" required/>
-      <input type='text' class="form-control" name="game_list[system]" placeholder="System" required/>
-      <input type='text' class="form-control" name="game_list[player_count]" placeholder="Player Count" required/>
-      <input type='text' class="form-control" name="game_list[sessions_count]" placeholder="Sessions Count" required/>
-      <input type='text' class="form-control" name="game_list[description]" placeholder="Description" required/>
-      Start Date <input type='date' class="form-control" name="game_list[start_date]" placeholder="Start Date" required/>
-      <button type="submit" class="update btn btn-info update-game">Submit Update</button>
-    </form>
-  </div>
-</div>
+      <div class="dropdown">
+        <button type="submit" class="btn btn-danger delete-game">Remove</button>
+        <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Edit Game
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <form id="updateGame" class=>
+            <input type='text' class="form-control" name="game_list[title]" placeholder="Title" required />
+            <input type='text' class="form-control" name="game_list[system]" placeholder="System" required />
+            <input type='text' class="form-control" name="game_list[player_count]" placeholder="Player Count" required />
+            <input type='text' class="form-control" name="game_list[sessions_count]" placeholder="Sessions Count" required />
+            <input type='textarea' class="form-control" name="game_list[description]" placeholder="Description" rows='4' required />
+            Start Date <input type='date' class="form-control" name="game_list[start_date]" placeholder="Start Date" required />
+            <button type="submit" class="update btn btn-info update-game">Submit Update</button>
+          </form>
+        </div>
+      </div>
 
     {{/if}}
- </section>
+  </section>
 {{/each}}
