@@ -1,6 +1,6 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 # Connected Sites
-- Back End Repo: https://github.com/DiGregorioC/game-db-p2
+- Back-End Repo: https://github.com/DiGregorioC/game-db-p2
 - Application: https://digregorioc.github.io/project-2-cd-client/
 - Heroku Site: https://game-db-cdigregorio.herokuapp.com/
 
@@ -18,6 +18,10 @@
 - Ruby
 - Ruby On Rails
 - SCSS
+
+### About the Front-End
+  The front-end of this website is a single page application(SPA) that presents user with a welcome page, before
+  sign-up and log-in, and upon successful login, presents them with a panel of buttons, which lets them view the database items, add a new item, change their password, and log out. The content displayed upon clicking "View All Adventures" is pulled in from a handlebar, which structures each entry into a section. These entries are sorted so the user who is logged in, will see their games on the top, as well as seeing a edit and delete button, on only their entries. Upon any successful add, delete, or edit, the content is pulled in again, so the user can see their updates now in the database.
 
 # Development Process
   This project was my first experince creating a full-stack website, with a backend and front end built by myself.
