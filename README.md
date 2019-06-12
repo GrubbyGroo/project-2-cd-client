@@ -1,4 +1,8 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+# Connect Sites
+- Back End Repo: https://github.com/DiGregorioC/game-db-p2
+- Application: https://digregorioc.github.io/project-2-cd-client/
+- Heroku Site: https://game-db-cdigregorio.herokuapp.com/
 
 # Technologies Used
 - Ajax
