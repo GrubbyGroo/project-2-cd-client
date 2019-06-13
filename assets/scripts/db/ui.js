@@ -5,7 +5,7 @@ const showGamesTemplate = require('../templates/games.handlebars')
 
 const getGamesSuccess = responseData => {
   $('#message').stop(true, true).text('Success, See Below!').fadeIn()
-  $('#message').stop(true, true).fadeOut(8000)
+  $('#message').stop(true, true).fadeOut(10000)
   $('#errormessage').stop(true, true)
   $('form').trigger('reset')
   $('.content').removeClass('hidden')
@@ -31,7 +31,7 @@ const updateGameSuccess = responseData => {
 }
 const getGamesFailure = responseData => {
   $('#message').stop(true, true).text('Not Retrieved, Please Try Again!').fadeIn()
-  $('#message').stop(true, true).fadeOut(8000)
+  $('#message').stop(true, true).fadeOut(10000)
   $('#errormessage').stop(true, true)
   $('form').trigger('reset')
 }
@@ -43,7 +43,7 @@ const onCreateSuccess = () => {
 
 const onCreateFailure = () => {
   $('#message').stop(true, true).text('Game Not Created, Try Again!').fadeIn()
-  $('#message').stop(true, true).fadeOut(8000)
+  $('#message').stop(true, true).fadeOut(10000)
   $('#errormessage').stop(true, true)
   $('form').trigger('reset')
 }
