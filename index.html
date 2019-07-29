@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Pangolin&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Finger+Paint&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+  <title>The Green Dragon Inn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to the Green Dragon Inn</h1>
+    <br>
+    <h3>Welcome Traveler!</h3>
+    <h4> Come, Stay for a Spell and Tell us Stories of Your Adventures!</h4>
+
+
+    <h5 class='message' id='message'> </h5>
+    <h5 class='errormessage' id='errormessage'>   </h5>
+    <div class="user-controls-not-logged text-center">
+
+      <div class="dropdown not-logged-in">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          New To Town?
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <form id="sign-up" class='user'>
+            <input type="text" class="form-control" name="credentials[email]" placeholder="Enter Email" required>
+            <input type="password" class="form-control" name="credentials[password]" placeholder="Password" required>
+            <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
+            <input class="btn btn-success" type="submit" value="Good to Have You!" />
+          </form>
+        </div>
+      </div>
+
+      <div class="dropdown not-logged-in">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Been Here Before?
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <form id="sign-in" class='user'>
+            <input type=" text" class="form-control" name="credentials[email]" placeholder="Enter Email" required>
+            <input type="password" class="form-control" name="credentials[password]" placeholder="Password" required>
+            <input class="btn btn-success" type="submit" value="Good to See You Again!" />
+          </form>
+        </div>
+      </div>
+
+      <div class="user-controls-logged logged-in hidden">
+        <form id='sign-out'>
+          <input class="btn btn-secondary" type="submit" value="Be On Your Way!" />
+        </form>
+
+        <div class="dropdown user-controls-logged">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Change Your Secret Code
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <form id="change-pw">
+              <!-- <h3>Change Password</h3> -->
+              <input type='password' class="form-control" name="passwords[old]" placeholder="Current Password" required />
+              <input type='password' class="form-control" name="passwords[new]" placeholder="New Password" required />
+              <input type="submit" class="btn btn-success" value="Change Password" />
+            </form>
+          </div>
+        </div>
+
+        <div class="dropdown user-controls-logged">
+          <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Log a New Adventure
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <form id="createGame" class='logged-in hidden'>
+              <input type='text' class="form-control" name="title" placeholder="Game Name" required />
+              <input type='text' class="form-control" name="system" placeholder="Game System" required />
+              <input type='number' min='1' max='100' class="form-control" name="player_count" placeholder="Player Count" required />
+              <input type='number' min='1' max='100'  class="form-control" name="sessions_count" placeholder="Sessions Count" required />
+              <input type='text' class="form-control" name="description" placeholder="Description" required />
+              Start Date
+              <input type='date' class="form-control" name="start_date" placeholder="Start Date" required>
+              <input type="submit" class="btn btn-success" value="Create Game!" />
+            </form>
+
+          </div>
+        </div>
+
+        <button id="getGames" class="logged-in btn btn-warning hidden">View All Adventures!</button>
+  </header>
+
+  <main class="jumbotron-fluid">
+
+    <div class="about container">
+      <h2 class="display-4"> About: The Green Dragon Inn</h2>
+      <h5> A TableTop Role Playing Game Tracker.</h5>
+      <p class="lead">A User Populated Database, to allow the recording of upcoming Table Top RPG
+        games. Users are able to view all current games in the database, as well
+        as add their own.</p>
+      <ul><h6> Future Plans:</h6>
+        <li> To allow users to add other user to their game, as players</li>
+        <li> To allow users to express interest in upcoming games</li>
+        <li> To allow users to send form emails to users who will be running games </li>
+        <li> To allow users to make sessions logs for their games, as to be able to
+          provide a reference for other players, themselves, and for anyone to
+          read and enjoy </li>
+      </ul>
+    </div>
+    <div id="content" class="content logged-in hidden"></div>
+  </main>
+
+</body>
+<footer>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#projectInfoModal">
+    About the Project
+  </button>
+  <div class="modal fade" id="projectInfoModal" tabindex="-1" role="dialog" aria-labelledby="aboutModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="aboutModal">About The Project</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          At a high level, here are the goals developers had for this project:
+          <ul>
+            <br>
+            <li>Use a front-end Javascript app to communicate with your API and render data received in the browser.</li>
+            <li>User must be able to create a new resource</li>
+            <li>User must be able to update a resource</li>
+            <li>User must be able to delete a resource</li>
+            <li>User must be able to view a single or multiple resource(s)</li>
+            <li>All resource actions that change data must only be available to a signed in user.</li>
+            <li>Give feedback to the user after each action's success or failure.</li>
+
+            <li>Build an API using Ruby on Rails and Postgresql.</li>
+            <li>Create at least 4 RESTful routes for handling GET, POST, PUT/PATCH, and DELETE requests.</li>
+            <li>Any actions which change data must be authenticated and the data must be "owned" by the user performing the change.</li>
+            <li>Have at least 1 resource that has a relationship to User</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#aboutMeModal">
+    About the Engineer
+  </button>
+  <div class="modal fade" id="aboutMeModal" tabindex="-1" role="dialog" aria-labelledby="aboutModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="aboutModal">About The Engineer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Cameron DiGregorio is a Software Engineering Fellow at General Assembly
+          <a href="https://www.linkedin.com/in/cdigregorio/" target="_blank">View My LinkedIn</a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</html>
