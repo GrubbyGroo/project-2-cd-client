@@ -35,22 +35,14 @@ section {
 }
 
 .about {
-  width: 50%;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-left: 20rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   font-family: 'Roboto', sans-serif;
-  border: 15px inset rgba(164,76,23,0.25);
-  border-radius: 40px 40px 40px 40px;
 }
 
 .content {
   font-family: 'Source Sans Pro', sans-serif;
   margin-top: 20px;
-  display:flex;
+  display: flex;
   @include make-row;
   justify-content: center;
 }
@@ -83,34 +75,24 @@ h6 {
   width: 20rem;
 }
 
-.btn-primary {
-  font-weight: bold;
-  width: 15rem;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.btn-danger,
-.btn-info {
-  border-style: outset;
-  border-width: 2px;
-}
-
+// .btn-primary {
+//   font-weight: bold;
+//   width: 15rem;
+//   margin-left: 5px;
+//   margin-right: 5px;
+// }
+//
+// .btn-danger,
+// .btn-info {
+//   border-style: outset;
+//   border-width: 2px;
+// }
+//
 .btn-secondary,
 .btn-warning {
-  font-weight: bold;
-  width: 15rem;
-  margin-left: 5px;
-  margin-right: 5px;
-  box-shadow: 8px 0px 15px rgba(0, 0, 0, 0.4);
+  margin-top: 1rem;
 }
 
-.user-controls-logged {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  justify-content: center;
-}
 
 .dropdown {
   padding-left: 5px;
